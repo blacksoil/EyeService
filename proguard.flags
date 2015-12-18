@@ -1,0 +1,11 @@
+-keep class *
+# ---- Required for thrift ----
+-dontwarn javax.**
+-dontwarn java.**
+-dontwarn org.apache.log4j.lf5.viewer.**
+-dontnote org.apache.log4j.lf5.viewer.**
+-dontwarn com.sun.**
+-dontwarn org.apache.log4j.spi.LocationInfo
+-dontnote org.apache.log4j.spi.LocationInfo
+-dontwarn org.slf4j.LoggerFactory
+# -----------------------------
