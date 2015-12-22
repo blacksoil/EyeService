@@ -66,6 +66,15 @@
 
     <application android:persistent="true"
                  android:label="@string/label">
+		<activity
+			android:name="TestActivity"
+			android:label="TestActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
 
         <service android:name="CoreService">
             <intent-filter>

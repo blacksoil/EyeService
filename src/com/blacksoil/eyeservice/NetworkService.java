@@ -6,6 +6,18 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import tutorial.Calculator;
+import java.lang.Thread;
+import org.apache.thrift.TException;
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TProtocol;
+import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.THttpClient;
+import org.apache.thrift.transport.TTransport;
+import org.apache.thrift.transport.TTransportException;
+
+import com.blacksoil.eyeservice.R;
+
 import android.app.Service;
 
 public class NetworkService extends Service {
