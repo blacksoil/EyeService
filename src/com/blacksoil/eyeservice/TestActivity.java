@@ -33,6 +33,7 @@ public class TestActivity extends Activity implements View.OnClickListener {
 	private static final String HTTP_URL = "http://" + IP_ADDRESS + ":8080/php/PhpServer.php";
 	Button mPingButton;
 	Calculator.Client mTransferClient;
+	//Calculator.AsyncClient mAsyncClient;
 	TTransport mTransport;
 
 	@Override
@@ -67,6 +68,7 @@ public class TestActivity extends Activity implements View.OnClickListener {
 							if (mTransport.isOpen()) {
 								proto = new TBinaryProtocol(mTransport);
 								mTransferClient = new Calculator.Client(proto);	
+								//mAsyncClient = Calculator.AsyncClient.Factory.getAsyncClient(mTransport);
 							}
 						} catch(TTransportException e) {
 							Log.e(TAG, "handleMessage: MSG_INIT failed!");
